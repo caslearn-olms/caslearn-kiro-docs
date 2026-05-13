@@ -1,3 +1,11 @@
-# Every caslearn-* service/ui/tf repo is its own git repo
-caslearn-*/
-!caslearn-kiro-docs/   # in case you ever clone this repo itself as a sibling
+# Sibling service/ui/tf/etc repos are their own git repos.
+# Anchor with a leading slash so the pattern only matches at the workspace
+# root and doesn't accidentally swallow .kiro/specs/caslearn-olms/.
+/caslearn-*/
+
+# But never ignore anything inside .kiro/ — that's the content this repo owns.
+!.kiro/
+!.kiro/**
+
+# In case this repo itself is ever cloned as a sibling.
+!/caslearn-kiro-docs/
