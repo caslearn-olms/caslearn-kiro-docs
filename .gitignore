@@ -1,0 +1,3 @@
+# Every caslearn-* service/ui/tf repo is its own git repo
+caslearn-*/
+!caslearn-kiro-docs/   # in case you ever clone this repo itself as a sibling
